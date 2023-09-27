@@ -1,6 +1,6 @@
 function [z,x,Fs]= convolutionFilter(inputfileName,kernelfileName, N, overlap)
 
-% excerpt the first 4096 samples long's segment as the filter kernel, whcih
+% excerpt the first N samples long's segment as the filter kernel, whcih
 % is through 1~ N.  
   [k, Fs] = audioread(kernelfileName, [1, N]); 
 
