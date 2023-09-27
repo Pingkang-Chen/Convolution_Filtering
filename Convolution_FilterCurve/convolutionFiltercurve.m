@@ -1,6 +1,6 @@
 function [z,x,Fs] = convolutionFiltercurve(inputfileName,kernelfileName, N, overlap)
    
-% cut the first 4096 samples long's segment as the filter kernel,from 1~ N  
+% cut the first N samples long's segment as the filter kernel,from 1~ N  
   [k, Fs] = audioread(kernelfileName, [1, N]); 
   
 % make the kernel a mono signal
