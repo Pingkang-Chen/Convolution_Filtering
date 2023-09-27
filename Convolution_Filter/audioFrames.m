@@ -41,7 +41,21 @@ function xFrames = audioFrames(x, N, overlapFactor)
 
     end
 
-    % what about the extra columns of xFrames that just have zeros in them?
-    % how can we get rid of those?
+
+end
+
+function y = zeroPad(x, desiredLength)
+
+    % check the length of x
+    signalLength = length(x);
+
+    % calculate the difference in lengths between x and desired length
+    zpLength = abs(desiredLength - signalLength);
+
+    % create an array of zeros (this is the "pad")
+    zp = zeros(zpLength, 1);
+
+    % append the zero pad array to x
+    y = [x; zp];
 
 end
